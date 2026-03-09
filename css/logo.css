@@ -7,3 +7,23 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+.span-logo-header {
+  color: #2e2f42;
+}
+
+.logo-header {
+  padding: 24px 0;
+}
+.span-logo-footer {
+  display: inline-block;
+  color: #f4f4fd;
+}
+.logo-footer {
+  display: block;
+  margin-bottom: 16px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}

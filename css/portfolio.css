@@ -1,3 +1,44 @@
+.ul-portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    gap: 48px 24px;
+  }
+}
+
+.item-portfolio {
+  transition: box-shadow var(--tr-dur) var(--tr-fn);
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  @media screen and (min-width: 1158px) {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+  @media screen and (max-width: 1157px) {
+    box-shadow:
+      0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+  &:hover {
+    box-shadow:
+      0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 2px 1px rgba(46, 47, 66, 0.08);
+    cursor: pointer;
+  }
+}
+
 .item-portfolio:hover .p-overlay {
   transform: translateY(0%);
 }
@@ -25,51 +66,22 @@
 .a-portfolio {
   display: block;
 }
-.item-portfolio:hover {
-  box-shadow:
-    0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-.item-portfolio {
-  transition: box-shadow var(--tr-dur) var(--tr-fn);
-}
 
-.ul-portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
-}
-.item-portfolio {
-  width: calc((100% - 48px) / 3);
-}
 .img-portfolio {
   display: block;
+  width: 100%;
+  height: auto;
 }
-.p-team {
-  font-size: 16px;
-  margin-bottom: 8px;
-  text-align: center;
-}
-.h-team {
-  text-align: center;
-}
-.img-team {
-  margin-bottom: 32px;
-}
-.portfolio h3 {
-  color: #2e2f42;
+
+.h-portfolio {
+  color: var(--navy-blue);
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
-.portfolio p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+.p-portfolio {
+  margin-bottom: 8px;
 }
 
 .div-text-portfolio {
@@ -79,7 +91,4 @@
   border-bottom: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
-}
-.h-portfolio {
-  margin-bottom: 8px;
 }

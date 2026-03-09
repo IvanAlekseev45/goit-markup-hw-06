@@ -22,39 +22,83 @@
   <body>
     <header class="header-section">
       <div class="container header-container">
-        <nav class="nav-container">
-          <a href="./index.html" class="logo logo-header"
-            >Web<span class="span-logo-header">Studio</span></a
-          >
-          <ul class="header-list">
-            <li>
-              <a href="./index.html" class="nav-item studio">Studio</a>
-            </li>
-            <li>
-              <a href="" class="nav-item">Portfolio</a>
-            </li>
-            <li>
-              <a href="" class="nav-item">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="header-address">
-          <ul class="address-container">
-            <li>
-              <a href="mailto:info@devstudio.com" class="mailto-tel">info@devstudio.com</a>
-            </li>
-            <li>
-              <a href="tel:+110001111111" class="mailto-tel">+11 (000) 111-11-11</a>
-            </li>
-          </ul>
-        </address>
+        <a href="./index.html" class="logo logo-header"
+          >Web<span class="span-logo-header">Studio</span></a
+        >
+        <button class="mobile-menu-open" type="button">
+          <svg width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu">
+          <button type="button" class="mobile-menu-close-button">
+            <svg width="8" height="8" class="svg-transition">
+              <use href="./images/icons.svg#icon-close-black"></use>
+            </svg>
+          </button>
+          <nav class="nav-container">
+            <ul class="header-list">
+              <li>
+                <a href="./index.html" class="nav-item studio">Studio</a>
+              </li>
+              <li>
+                <a href="" class="nav-item">Portfolio</a>
+              </li>
+              <li>
+                <a href="" class="nav-item">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="mail-tel-social">
+            <address class="header-address">
+              <ul class="address-container">
+                <li>
+                  <a href="mailto:info@devstudio.com" class="mailto-tel">info@devstudio.com</a>
+                </li>
+                <li>
+                  <a href="tel:+110001111111" class="mailto-tel">+11 (000) 111-11-11</a>
+                </li>
+              </ul>
+            </address>
+            <ul class="ul-list-social-team">
+              <li class="li-social-team-items">
+                <a href="" class="link-social">
+                  <svg class="vector-images" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="li-social-team-items">
+                <a href="" class="link-social">
+                  <svg class="vector-images" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="li-social-team-items">
+                <a href="" class="link-social">
+                  <svg class="vector-images" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="li-social-team-items">
+                <a href="" class="link-social">
+                  <svg class="vector-images" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
-      <section class="section main-section">
-        <div class="container hero">
-          <h1 class="main-heading">Effective Solutions for Your Business</h1>
-          <button type="button" class="main-button">Order Service</button>
+      <section class="section-hero">
+        <div class="container hero-container">
+          <h1 class="hero-title">Effective Solutions for Your Business</h1>
+          <button type="button" class="hero-button">Order Service</button>
         </div>
       </section>
 
@@ -68,7 +112,7 @@
                   <use href="./images/icons.svg#icon-antenna-1"></use>
                 </svg>
               </div>
-              <h3 class="h-benefits">Strategy</h3>
+              <h3 class="title-benefits">Strategy</h3>
               <p class="p-benefits">
                 Our goal is to identify the business problem to walk away with the perfect and
                 creative solution.
@@ -81,7 +125,7 @@
                   <use href="./images/icons.svg#icon-clock-1"></use>
                 </svg>
               </div>
-              <h3 class="h-benefits">Punctuality</h3>
+              <h3 class="title-benefits">Punctuality</h3>
               <p class="p-benefits">
                 Bring the key message to the brand's audience for the best price within the shortest
                 possible time.
@@ -93,7 +137,7 @@
                   <use href="./images/icons.svg#icon-diagram-1"></use>
                 </svg>
               </div>
-              <h3 class="h-benefits">Diligence</h3>
+              <h3 class="title-benefits">Diligence</h3>
               <p class="p-benefits">
                 Research and confirm brands with the strongest digital growth opportunities and
                 minimize risk.
@@ -105,7 +149,7 @@
                   <use href="./images/icons.svg#icon-astronaut-1"></use>
                 </svg>
               </div>
-              <h3 class="h-benefits">Technologies</h3>
+              <h3 class="title-benefits">Technologies</h3>
               <p class="p-benefits">
                 Design practice focused on digital experiences. We bring forth a deep passion for
                 problem-solving.
@@ -115,13 +159,14 @@
         </div>
       </section>
       <section class="section section-team">
-        <div class="container">
+        <div class="container team-container">
           <h2 class="section-title">Our Team</h2>
-          <ul class="team-names">
+          <ul class="team-list">
             <li class="li-team">
               <img
                 class="img-team"
-                src="./images/img-3.jpg"
+                srcset="./images/team/mark@2x.jpeg 2x"
+                src="./images/team/mark.jpeg"
                 alt="Mark Guerrero"
                 width="264"
                 height="260"
@@ -164,7 +209,8 @@
             <li class="li-team">
               <img
                 class="img-team"
-                src="./images/img-2.jpg"
+                srcset="./images/team/tom@2x.jpeg 2x"
+                src="./images/team/tom.jpeg"
                 alt="Tom Ford"
                 width="264"
                 height="260"
@@ -207,7 +253,8 @@
             <li class="li-team">
               <img
                 class="img-team"
-                src="./images/img-1.jpg"
+                srcset="./images/team/camila@2x.jpeg 2x"
+                src="./images/team/camila.jpeg"
                 alt="Camila Garcia"
                 width="264"
                 height="260"
@@ -251,7 +298,8 @@
             <li class="li-team">
               <img
                 class="img-team"
-                src="./images/img.jpg"
+                srcset="./images/team/daniel@2x.jpeg 2x"
+                src="./images/team/daniel.jpeg"
                 alt="Daniel Wilson"
                 width="264"
                 height="260"
@@ -301,13 +349,32 @@
           <ul class="ul-portfolio">
             <li class="item-portfolio">
               <div class="div-overlay">
-                <img
-                  class="img-portfolio"
-                  src="./images/purple.jpg"
-                  alt="Banking App"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/purple-desktop.jpeg    1x,
+                      ./images/portfolio/purple-desktop@2x.jpeg 2x
+                    "
+                  />
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/purple-tablet.jpeg    1x,
+                      ./images/portfolio/purple-tablet@2x.jpeg 2x
+                    "
+                  />
+
+                  <img
+                    class="img-portfolio"
+                    srcset="./images/portfolio/purple-mobile@2x.jpeg 2x"
+                    src="./images/portfolio/purple-mobile.jpeg"
+                    alt="Banking App"
+                    width="288"
+                    height="280"
+                  />
+                </picture>
 
                 <p class="p-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -322,13 +389,32 @@
             </li>
             <li class="item-portfolio">
               <div class="div-overlay">
-                <img
-                  class="img-portfolio"
-                  src="./images/phone.jpg"
-                  alt="Cashless Payment"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/pay-desktop.jpeg    1x,
+                      ./images/portfolio/pay-desktop@2x.jpeg 2x
+                    "
+                  />
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/pay-tablet.jpeg    1x,
+                      ./images/portfolio/pay-tablet@2x.jpeg 2x
+                    "
+                  />
+
+                  <img
+                    class="img-portfolio"
+                    srcset="./images/portfolio/pay-mobile@2x.jpeg 2x"
+                    src="./images/portfolio/pay-mobile.jpeg"
+                    alt="Banking App"
+                    width="288"
+                    height="280"
+                  />
+                </picture>
 
                 <p class="p-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -342,13 +428,32 @@
             </li>
             <li class="item-portfolio">
               <div class="div-overlay">
-                <img
-                  class="img-portfolio"
-                  src="./images/laptop.jpg"
-                  alt="Meditation App"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/laptop-desktop.jpeg    1x,
+                      ./images/portfolio/laptop-desktop@2x.jpeg 2x
+                    "
+                  />
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/laptop-tablet.jpeg    1x,
+                      ./images/portfolio/laptop-tablet@2x.jpeg 2x
+                    "
+                  />
+
+                  <img
+                    class="img-portfolio"
+                    srcset="./images/portfolio/laptop-mobile@2x.jpeg 2x"
+                    src="./images/portfolio/laptop-mobile.jpeg"
+                    alt="Banking App"
+                    width="288"
+                    height="280"
+                  />
+                </picture>
 
                 <p class="p-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -362,13 +467,32 @@
             </li>
             <li class="item-portfolio">
               <div class="div-overlay">
-                <img
-                  class="img-portfolio"
-                  src="./images/car.jpg"
-                  alt="Taxi Service"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/taxi-desktop.jpeg    1x,
+                      ./images/portfolio/taxi-desktop@2x.jpeg 2x
+                    "
+                  />
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/taxi-tablet.jpeg    1x,
+                      ./images/portfolio/taxi-tablet@2x.jpeg 2x
+                    "
+                  />
+
+                  <img
+                    class="img-portfolio"
+                    srcset="./images/portfolio/taxi-mobile@2x.jpeg 2x"
+                    src="./images/portfolio/taxi-mobile.jpeg"
+                    alt="Banking App"
+                    width="288"
+                    height="280"
+                  />
+                </picture>
 
                 <p class="p-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -382,13 +506,32 @@
             </li>
             <li class="item-portfolio">
               <div class="div-overlay">
-                <img
-                  class="img-portfolio"
-                  src="./images/moon.jpg"
-                  alt="Screen Illustrations"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/phone-desktop.jpeg    1x,
+                      ./images/portfolio/phone-desktop@2x.jpeg 2x
+                    "
+                  />
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/phone-tablet.jpeg    1x,
+                      ./images/portfolio/phone-tablet@2x.jpeg 2x
+                    "
+                  />
+
+                  <img
+                    class="img-portfolio"
+                    srcset="./images/portfolio/phone-mobile@2x.jpeg 2x"
+                    src="./images/portfolio/phone-mobile.jpeg"
+                    alt="Banking App"
+                    width="288"
+                    height="280"
+                  />
+                </picture>
 
                 <p class="p-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -402,13 +545,32 @@
             </li>
             <li class="item-portfolio">
               <div class="div-overlay">
-                <img
-                  class="img-portfolio"
-                  src="./images/girl.jpg"
-                  alt="Online Courses"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/girl-desktop.jpeg    1x,
+                      ./images/portfolio/girl-desktop@2x.jpeg 2x
+                    "
+                  />
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/girl-tablet.jpeg    1x,
+                      ./images/portfolio/girl-tablet@2x.jpeg 2x
+                    "
+                  />
+
+                  <img
+                    class="img-portfolio"
+                    srcset="./images/portfolio/girl-mobile@2x.jpeg 2x"
+                    src="./images/portfolio/girl-mobile.jpeg"
+                    alt="Banking App"
+                    width="288"
+                    height="280"
+                  />
+                </picture>
 
                 <p class="p-overlay">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie
@@ -439,7 +601,7 @@
           <p class="p-last-social">Social media</p>
           <ul class="ul-list-social">
             <li class="li-footer">
-              <a href="" class="link-social link-social-footer">
+              <a href="" class="link-social">
                 <svg class="vector-images" width="24" height="24">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
@@ -474,7 +636,7 @@
             <label for="e-mail" class="footer-label">
               <input type="email" placeholder="E-mail" id="e-mail" class="input" name="e-mail" />
             </label>
-            <button type="submit" class="button-submit button-flex">
+            <button type="submit" class="button-submit">
               Subscribe
               <svg class="vektor-footer" width="24" height="24">
                 <use href="./images/icons.svg#icon-frame-airplane"></use>
